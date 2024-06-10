@@ -13,8 +13,6 @@ import Notice from './pages/notice/Notice';
 import NoticeDetail from './components/notice/NoticeDetail';
 import Customer from './pages/customer/Customer';
 import CustomerAdd from './components/customer/CustomerAdd';
-import CustomerEdit from './components/customer/CustomerEdit';
-import CustomerDetail from './components/customer/CustomerDetail';
 
 const App = () => {
     return (
@@ -38,7 +36,6 @@ const App = () => {
 
                         <Route path="/customer">
                             <Route index element={<Customer />} />
-                            <Route path=":customerID" element={<CustomerDetail />} />
                             <Route path="customeradd" element={<CustomerAdd />} />
                         </Route>
                     </Route>

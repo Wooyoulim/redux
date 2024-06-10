@@ -1,25 +1,21 @@
 import { CustomerAddWrap } from './CustomerStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { onAdd, changeInput, onUpdate } from '../../store/modules/customerSlice';
+import { onAdd, changeTitle, changeUser, signUpDate } from '../../store/modules/customerSlice';
 
 const CustomerAdd = () => {
-    const { customerAdd } = useSelector((state) => state.customerR);
+    const { title, user, date, customerData } = useSelector((state) => state.customerR);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const { title, name } = customerAdd;
-
     const onSubmit = (e) => {
         e.preventDefault();
-        if (!title || !name) return;
+        if (!title || !user) return;
 
-        dispatch(onAdd(customerAdd));
-        dispatch(onUpdate(customerAdd));
-        dispatch(changeInput(''));
+        dispatch(onAdd(title));
         navigate('/customer');
-        console.log(title);
-        console.log(name);
+        dispatch(changeTitle(''));
+        dispatch(changeUser(''));
     };
 
     return (
@@ -33,16 +29,16 @@ const CustomerAdd = () => {
                             placeholder="title"
                             name="title"
                             value={title}
-                            onChange={(e) => dispatch(changeInput(e.target.value))}
+                            onChange={(e) => dispatch(changeTitle(e.target.value))}
                         />
                     </p>
                     <p>
                         <input
                             type="text"
                             placeholder="user"
-                            name="name"
-                            value={name}
-                            onChange={(e) => dispatch(changeInput(e.target.value))}
+                            name="user"
+                            value={user}
+                            onChange={(e) => dispatch(changeUser(e.target.value))}
                         />
                     </p>
                     <p>

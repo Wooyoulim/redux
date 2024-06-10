@@ -7,51 +7,58 @@ const initialState = {
         { id: 3, title: 'cccc', user: 'user3', date: '2023-12-24' },
         { id: 4, title: 'dddd', user: 'user4', date: '2023-12-24' },
     ],
-    current: null,
-    customerAdd: [
-        {
-            title: '',
-            name: '',
-            date: '',
-        },
-    ],
+    title: '',
+    user: '',
+    date: '',
 };
 
-let no = 6;
+let no = 5;
 
 export const customerSlice = createSlice({
     name: 'customer',
     initialState,
     reducers: {
         onAdd: (state, action) => {
+            const getDate = () => {
+                const today = new Date();
+                const month = today.getMonth() + 1;
+                const year = today.getFullYear();
+                const date = today.getDate();
+                return `${year}-${month}-${date}`;
+            };
             state.customerData = [
                 ...state.customerData,
-                { id: no++, text: action.payload, isChk: false },
+                {
+                    id: no++,
+                    title: action.payload,
+                    user: state.user,
+                    date: getDate(),
+                },
             ];
+
+            state.date = getDate();
+
             localStorage.setItem('customerData', JSON.stringify(state.customerData));
         },
-        onDel: (state, action) => {
-            state.customerData = state.customerData.filter((item) => item.id !== action.payload);
-        },
 
-        onEdit: (state, action) => {
-            state.current = action.payload;
-            localStorage.setItem('customerData', JSON.stringify(state.noticeData));
+        changeTitle: (state, action) => {
+            state.title = action.payload;
         },
-        onUpdate: (state, action) => {
-            state.current = action.payload;
+        changeUser: (state, action) => {
+            state.user = action.payload;
+        },
+        signUpDate: (state, action) => {
+            const getDate = () => {
+                const today = new Date();
+                const month = today.getMonth() + 1;
+                const year = today.getFullYear();
+                const date = today.getDate();
+                return `${year}-${month}-${date}`;
+            };
 
-            const newItem = state.customerData.find((item) => item.id === action.payload.id);
-            if (newItem) {
-                newItem.text = action.payload.text;
-            }
-            localStorage.setItem('customerData', JSON.stringify(state.noticeData));
-        },
-        changeInput: (state, action) => {
-            state.customerAdd.title = action.payload;
-            state.customerAdd.name = action.payload;
+            state.date = getDate();
         },
     },
 });
-export const { onAdd, onDel, onEdit, onUpdate, changeInput } = customerSlice.actions;
+export const { onAdd, onUpdate, changeTitle, changeUser, signUpDate } = customerSlice.actions;
 export default customerSlice.reducer;

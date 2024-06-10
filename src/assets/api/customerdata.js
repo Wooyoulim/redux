@@ -1,0 +1,18 @@
+export default [
+    { id: 1, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 2, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 3, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 4, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 5, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 6, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 7, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 8, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 9, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 10, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 11, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 12, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 13, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 14, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 15, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+    { id: 16, name: '김태리', title: '문의글1', content: '문의내용', date: '2024-05-30' },
+];

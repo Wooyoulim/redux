@@ -17,7 +17,7 @@ import CustomerAdd from './components/customer/CustomerAdd';
 const App = () => {
     return (
         <>
-            <BrowserRouter>
+            <Router>
                 <GlobalStyle />
                 <Routes>
                     <Route path="/" element={<Layout />}>
@@ -42,7 +42,7 @@ const App = () => {
 
                     <Route path="*" element={<NotFiles />} />
                 </Routes>
-            </BrowserRouter>
+            </Router>
         </>
     );
 };

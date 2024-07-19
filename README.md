@@ -8,7 +8,7 @@
 <br>
 
 - 수업시간의 예제를 활용하여 작업한 Redux 사이트
-- 바로가기 : wooyoulim.github.io/redux/dist
+- 바로가기 : https://wooyoulim.github.io/redux/dist/#/
 
 - 활용 Skills : <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" />
   <br>
